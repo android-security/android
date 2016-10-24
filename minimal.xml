@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="android-security"
+           fetch="https://github.com/android-security/"
+           revision="aosp-5.1" />
+
+  <!-- patched AOSP repos -->
+  <project path="build" name="android_build" remote="android-security" groups="pdk" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="android-security" groups="pdk" />
+  <project path="external/bouncycastle" name="android_external_bouncycastle" remote="android-security" />
+  <project path="external/conscrypt" name="android_external_conscrypt" remote="android-security" />
+  <project path="external/flac" name="android_external_flac" remote="android-security" groups="pdk" />
+  <project path="external/jhead" name="android_external_jhead" remote="android-security" groups="pdk" />
+  <project path="external/libvpx" name="android_external_libvpx" remote="android-security" groups="pdk" />
+  <project path="external/openssl" name="android_external_openssl" remote="android-security" groups="pdk" />
+  <project path="external/sonivox" name="android_external_sonivox" remote="android-security" groups="pdk" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="android-security" groups="pdk" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="android-security" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="android-security" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="android-security" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="android-security" />
+  <project path="libcore" name="android_libcore" remote="android-security" />
+  <project path="packages/apps/Email" name="android_packages_apps_Email" remote="android-security" />
+  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="android-security" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="android-security" />
+  <project path="system/core" name="android_system_core" remote="android-security" groups="pdk" />
+  <project path="system/media" name="android_system_media" remote="android-security" groups="pdk" />
+
+
+</manifest>
